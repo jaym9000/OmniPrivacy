@@ -2,238 +2,185 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy | Omni AI – Your Therapy Companion</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Privacy Policy | Omni AI – Your Therapy Companion</title>
 
-  <!-- Google Font & Icons CDN -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-        integrity="sha512-oHirLmk+4dO+ccHkTI3Fwj8KvE3QCy+CtN1dLIqHc1n6+IMO4rzhy6qd0hQBzMObbZx4qbEPLMEd6VDX2x5KwQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- Google Font & Icons CDN -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-oHirLmk+4dO+ccHkTI3Fwj8KvE3QCy+CtN1dLIqHc1n6+IMO4rzhy6qd0hQBzMObbZx4qbEPLMEd6VDX2x5KwQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <style>
-    /* === Base Reset & Variables === */
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    :root{
-      --clr-bg:#f9fafb;
-      --clr-primary:#635bff;
-      --clr-primary-dark:#4e46d4;
-      --clr-text:#222;
-      --clr-muted:#666;
-      --radius:12px;
-      --shadow:0 4px 12px rgb(0 0 0 / .08);
-      --max-width:860px;
-    }
-    body{
-      font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-      line-height:1.6;
-      color:var(--clr-text);
-      background:var(--clr-bg);
-    }
-    a{color:var(--clr-primary);text-decoration:none}
-    a:hover{text-decoration:underline}
-    h1,h2,h3{font-weight:700;line-height:1.25;margin-bottom:.6em}
-    p,li{font-size:1rem;margin-bottom:1em;color:var(--clr-muted)}
-    ul,ol{padding-left:1.2em;margin-bottom:1em}
-    /* === Layout === */
-    header{
-      background:linear-gradient(135deg,var(--clr-primary) 0%,var(--clr-primary-dark) 100%);
-      color:#fff;
-      padding:3.5rem 1rem 4rem;
-      text-align:center;
-      box-shadow:var(--shadow);
-    }
-    header .logo{
-      font-size:1.75rem;
-      font-weight:700;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      gap:.5rem;
-      margin-bottom:.5rem;
-    }
-    main{max-width:var(--max-width);margin:-2.5rem auto 4rem;padding:0 1rem}
-    .card{
-      background:#fff;
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-      padding:2rem 1.5rem;
-    }
-    /* === Accordion === */
-    .accordion-item{border-top:1px solid #e5e7eb}
-    .accordion-button{
-      width:100%;
-      padding:1rem 0;
-      background:none;
-      border:none;
-      text-align:left;
-      font-size:1.1rem;
-      font-weight:600;
-      color:var(--clr-text);
-      cursor:pointer;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-    }
-    .accordion-button i{transition:transform .25s ease}
-    .accordion-button[aria-expanded="true"] i{transform:rotate(180deg)}
-    .accordion-content{
-      max-height:0;
-      overflow:hidden;
-      transition:max-height .35s ease;
-    }
-    .accordion-content.open{padding-bottom:1rem}
-    footer{
-      text-align:center;
-      font-size:.9rem;
-      padding:2rem 1rem 3rem;
-      color:var(--clr-muted);
-    }
-    /* === Responsive Typography === */
-    @media (min-width:560px){
-      h1{font-size:2.5rem}
-      h2{font-size:1.5rem}
-    }
-  </style>
+<style>
+/* === Base Reset & Tokens === */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#f9fafb;
+  --primary:#5b54ff;        /* slightly lighter for AA contrast */
+  --primary-dark:#4a43d4;
+  --text:#222;
+  --muted:#666;
+  --radius:12px;
+  --shadow:0 4px 14px rgb(0 0 0/.08);
+  --max:860px;
+}
+body{
+  font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+  line-height:1.6;
+  background:var(--bg);
+  color:var(--text);
+}
+a{color:var(--primary);text-decoration:none}
+a:hover{text-decoration:underline}
+h1,h2,h3{font-weight:700;line-height:1.25;margin-bottom:.6em}
+p,li{font-size:1rem;margin-bottom:1em;color:var(--muted)}
+ul,ol{padding-left:1.2em;margin-bottom:1em}
+
+/* === Layout === */
+header{
+  background:linear-gradient(135deg,var(--primary) 0%,var(--primary-dark) 100%);
+  color:#fff;
+  text-align:center;
+  padding:3.5rem 1rem 4rem;
+  box-shadow:var(--shadow);
+}
+header .logo{
+  display:flex;justify-content:center;align-items:center;gap:.5rem;
+  font-size:1.8rem;font-weight:700;margin-bottom:.5rem;
+}
+header p{max-width:650px;margin:0 auto;font-weight:400}
+
+/* card */
+main{max-width:var(--max);margin:-2.5rem auto 4rem;padding:0 1rem}
+.card{
+  background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:2rem 1.5rem;
+}
+
+/* === Details Accordion === */
+details{border-top:1px solid #e5e7eb;padding:.8rem 0}
+details:first-of-type{border-top:none}
+details summary{
+  cursor:pointer;list-style:none;font-weight:600;font-size:1.05rem;
+  display:flex;justify-content:space-between;align-items:center;
+}
+details summary::-webkit-details-marker{display:none}
+details[open] summary i{transform:rotate(180deg)}
+details summary i{transition:transform .25s}
+details > *:not(summary){margin-top:1rem}
+
+/* Footer */
+footer{text-align:center;font-size:.9rem;padding:2rem 1rem 3rem;color:var(--muted)}
+
+/* Responsive text */
+@media (min-width:560px){
+  h1{font-size:2.4rem}
+  h2{font-size:1.45rem}
+}
+</style>
 </head>
 <body>
 
-  <!-- ===== HERO / HEADER ===== -->
-  <header>
-    <div class="logo"><i class="fas fa-brain"></i> Omni AI</div>
-    <h1>Privacy Policy</h1>
-    <p>Your privacy is our priority. This page explains how Omni AI (operated by a solo developer) collects, uses, and protects your data.</p>
-  </header>
+<!-- ===== HERO ===== -->
+<header>
+  <div class="logo"><i class="fas fa-brain"></i> Omni AI</div>
+  <h1>Privacy Policy</h1>
+  <p>Your privacy is our priority. This page explains how Omni AI (operated by a solo developer) collects, uses, and protects your data.</p>
+</header>
 
-  <!-- ===== MAIN CONTENT ===== -->
-  <main>
-    <article class="card" id="privacy">
-      <p><strong>Effective:</strong> 24 March 2025 | <strong>Last Updated:</strong> 21 May 2025</p>
-      <p><strong>Omni AI</strong> (“we,” “our,” or “us”) provides an AI-powered mental-health application and related services (“Services”). This Privacy Policy describes how we handle your information.</p>
+<!-- ===== MAIN ===== -->
+<main>
+  <article class="card">
+    <p><strong>Effective:</strong> 24 March 2025<br><strong>Last Updated:</strong> 21 May 2025</p>
+    <p><strong>Omni AI</strong> (“we,” “our,” or “us”) provides an AI-powered mental-health application and related services (“Services”). This Privacy Policy describes how we handle your information.</p>
 
-      <div class="accordion">
+    <!-- === Accordion starts === -->
+    <details>
+      <summary>1. Information We Collect <i class="fas fa-chevron-down"></i></summary>
+      <ul>
+        <li><strong>Account Data</strong> – name, email, Apple ID identifier.</li>
+        <li><strong>Content You Provide</strong> – chat transcripts, mood logs, voice notes, journal entries (health data).</li>
+        <li><strong>Analytics & Device Data</strong> – device ID, IP, interaction events, crash logs.</li>
+        <li><strong>Payment Metadata</strong> – subscription status via Apple IAP & RevenueCat (no card data).</li>
+      </ul>
+    </details>
 
-        <!-- ITEM 1 -->
-        <section class="accordion-item">
-          <button class="accordion-button" aria-expanded="false">
-            <span>1. Information We Collect</span><i class="fas fa-chevron-down"></i>
-          </button>
-          <div class="accordion-content">
-            <ul>
-              <li><strong>Account Data</strong> – name, email, Apple ID identifier.</li>
-              <li><strong>Content You Provide</strong> – chat transcripts, mood logs, voice notes, journal entries (health data).</li>
-              <li><strong>Analytics & Device Data</strong> – device ID, IP address, interaction events, crash logs.</li>
-              <li><strong>Payment Metadata</strong> – purchase identifiers & subscription status via Apple IAP and RevenueCat (no full card data).</li>
-            </ul>
-          </div>
-        </section>
+    <details>
+      <summary>2. Legal Bases <i class="fas fa-chevron-down"></i></summary>
+      <ol>
+        <li><strong>Consent</strong> – explicit consent for health data (GDPR Art 9).</li>
+        <li><strong>Contract</strong> – to deliver and bill for subscription features.</li>
+        <li><strong>Legal Obligation & Vital Interests</strong> – to comply with law or protect life.</li>
+      </ol>
+    </details>
 
-        <!-- ITEM 2 -->
-        <section class="accordion-item">
-          <button class="accordion-button" aria-expanded="false">
-            <span>2. Legal Bases</span><i class="fas fa-chevron-down"></i>
-          </button>
-          <div class="accordion-content">
-            <ol>
-              <li><strong>Consent</strong> – explicit consent for special-category health data (GDPR Art 9).</li>
-              <li><strong>Contract</strong> – to provide and bill for subscription features.</li>
-              <li><strong>Legal Obligation & Vital Interests</strong> – to comply with law or protect life and safety.</li>
-            </ol>
-          </div>
-        </section>
+    <details>
+      <summary>3. How We Use Information <i class="fas fa-chevron-down"></i></summary>
+      <ol>
+        <li>Provide personalised AI therapy support.</li>
+        <li>Monitor, debug, and improve performance and security.</li>
+        <li>Offer customer support and respond to queries.</li>
+        <li>Detect and prevent fraud or misuse.</li>
+        <li>Comply with legal obligations and enforce our terms.</li>
+      </ol>
+    </details>
 
-        <!-- ITEM 3 -->
-        <section class="accordion-item">
-          <button class="accordion-button" aria-expanded="false">
-            <span>3. How We Use Information</span><i class="fas fa-chevron-down"></i>
-          </button>
-          <div class="accordion-content">
-            <ol>
-              <li>Deliver personalised AI therapy support.</li>
-              <li>Monitor, debug, and improve performance and security.</li>
-              <li>Provide customer support.</li>
-              <li>Detect and prevent fraud or misuse.</li>
-              <li>Comply with legal obligations and enforce our terms.</li>
-            </ol>
-          </div>
-        </section>
+    <details>
+      <summary>4. Sharing & International Transfers <i class="fas fa-chevron-down"></i></summary>
+      <p>We <strong>do not sell</strong> your personal data. We share data only with the following processors under strict contractual controls:</p>
+      <ul>
+        <li>OpenAI LLC – language processing.</li>
+        <li>AWS – secure cloud hosting.</li>
+        <li>RevenueCat Inc. – subscription management.</li>
+        <li>Apple Inc. – in-app purchase processing.</li>
+      </ul>
+      <p>For transfers outside Canada, we rely on Standard Contractual Clauses or comparable safeguards to ensure PIPEDA-level protection.</p>
+    </details>
 
-        <!-- ITEM 4 -->
-        <section class="accordion-item">
-          <button class="accordion-button" aria-expanded="false">
-            <span>4. Sharing & International Transfers</span><i class="fas fa-chevron-down"></i>
-          </button>
-          <div class="accordion-content">
-            <p>We <strong>do not sell</strong> your personal data. We share data only with processors who help us operate the Services under strict contractual controls:</p>
-            <ul>
-              <li>OpenAI LLC – language processing.</li>
-              <li>AWS – secure cloud hosting.</li>
-              <li>RevenueCat Inc. – subscription management.</li>
-              <li>Apple Inc. – in-app purchase processing.</li>
-            </ul>
-            <p>When data is transferred outside Canada, we rely on Standard Contractual Clauses or comparable safeguards to maintain PIPEDA-level protection.</p>
-          </div>
-        </section>
+    <details>
+      <summary>5. Security Measures <i class="fas fa-chevron-down"></i></summary>
+      <p>All traffic is encrypted with TLS 1.3 in transit and AES-256 at rest. Production access requires MFA and role-based policies.</p>
+    </details>
 
-        <!-- ITEM 5 -->
-        <section class="accordion-item">
-          <button class="accordion-button" aria-expanded="false">
-            <span>5. Security Measures</span><i class="fas fa-chevron-down"></i>
-          </button>
-          <div class="accordion-content">
-            <p>All traffic is encrypted with TLS 1.3 in transit and AES-256 at rest. Access to production systems is restricted by role-based policies and multi-factor authentication.</p>
-          </div>
-        </section>
+    <details>
+      <summary>6. Data Retention <i class="fas fa-chevron-down"></i></summary>
+      <p>We retain data while your account is active. Once deleted, we purge personal data within 30 days, unless a longer period is required by law.</p>
+    </details>
 
-        <!-- ITEM 6 -->
-        <section class="accordion-item">
-          <button class="accordion-button" aria-expanded="false">
-            <span>6. Data Retention</span><i class="fas fa-chevron-down"></i>
-          </button>
-          <div class="accordion-content">
-            <p>We keep data while your account is active. Upon deletion we erase personal data within 30 days, unless longer retention is required by law.</p>
-          </div>
-        </section>
+    <details>
+      <summary>7. Your Rights <i class="fas fa-chevron-down"></i></summary>
+      <ul>
+        <li>Access, correct, or delete your data.</li>
+        <li>Export a copy (portability).</li>
+        <li>Withdraw consent at any time.</li>
+        <li>Opt out of analytics or marketing.</li>
+      </ul>
+      <p>Exercise these rights in-app (<em>Settings › Privacy</em>) or email <a href="mailto:omniappofficial@gmail.com">omniappofficial@gmail.com</a>.</p>
+    </details>
 
-        <!-- ITEM 7 -->
-        <section class="accordion-item">
-          <button class="accordion-button" aria-expanded="false">
-            <span>7. Your Rights</span><i class="fas fa-chevron-down"></i>
-          </button>
-          <div class="accordion-content">
-            <ul>
-              <li>Access, correct, or delete your data.</li>
-              <li>Export a copy of your data (portability).</li>
-              <li>Withdraw consent at any time.</li>
-              <li>Opt-out of analytics or marketing.</li>
-            </ul>
-            <p>Exercise these rights in-app (<em>Settings › Privacy</em>) or email <a href="mailto:omniappofficial@gmail.com">omniappofficial@gmail.com</a>.</p>
-          </div>
-        </section>
+    <details>
+      <summary>8. Children’s Privacy <i class="fas fa-chevron-down"></i></summary>
+      <p>Omni AI is not directed to children under 13 and does not knowingly collect their data.</p>
+    </details>
 
-        <!-- ITEM 8 -->
-        <section class="accordion-item">
-          <button class="accordion-button" aria-expanded="false">
-            <span>8. Children’s Privacy</span><i class="fas fa-chevron-down"></i>
-          </button>
-          <div class="accordion-content">
-            <p>Omni AI is not directed to children under 13 and does not knowingly collect data from them.</p>
-          </div>
-        </section>
+    <details>
+      <summary>9. Changes to This Policy <i class="fas fa-chevron-down"></i></summary>
+      <p>We may update this Policy periodically. Material changes will be announced in-app or by email at least 14 days in advance.</p>
+    </details>
 
-        <!-- ITEM 9 -->
-        <section class="accordion-item">
-          <button class="accordion-button" aria-expanded="false">
-            <span>9. Changes to This Policy</span><i class="fas fa-chevron-down"></i>
-          </button>
-          <div class="accordion-content">
-            <p>We may update this Policy from time to time. Material changes will be announced in-app or by email at least 14 days before they take effect.</p>
-          </div>
-        </section>
+    <details>
+      <summary>10. Contact & Complaints <i class="fas fa-chevron-down"></i></summary>
+      <p>Email: <a href="mailto:omniappofficial@gmail.com">omniappofficial@gmail.com</a><br>
+         Mail: Solo Developer, Omni AI, Saint John NB, Canada.</p>
+      <p>If unresolved, you may contact the Office of the Privacy Commissioner of Canada (<a href="https://priv.gc.ca/en/contact-the-opc/" target="_blank" rel="noopener">OPC</a>).</p>
+    </details>
 
-        <!-- ITEM 10 -->
-        <section class="accordion-item">
-          <button class="accordion-button" aria-expanded="false">
-            <span>10. Contact & Com
+    <hr style="margin-top:2rem" />
+    <p style="font-size:.85rem;color:var(--muted)">© 2025 Omni AI | This document is provided for information only and does not constitute legal advice.</p>
+  </article>
+</main>
+
+<footer>
+  <p>In crisis? Call <strong><a href="tel:988">988 Suicide & Crisis Lifeline</a></strong> (U.S.) or your local emergency number.</p>
+</footer>
+
+</body>
+</html>
